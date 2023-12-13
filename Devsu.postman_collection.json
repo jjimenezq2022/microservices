@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "38019191-325a-4844-a72b-0b5c01c80935",
+		"name": "Devsu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5710039"
+	},
+	"item": [
+		{
+			"name": "CrearCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    /*\r\n    {\r\n        \"nombre\": \"Jose Lema\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\",\r\n        \"contrasena\": \"123\",\r\n        \"estado\": true\r\n    }\r\n*/\r\n    \r\n    \r\n    /*\r\n    {\r\n        \"nombre\": \"Marianela Montalvo\",\r\n        \"direccion\": \"Amazonas  y NNUU\",\r\n        \"telefono\": \"097548965\",\r\n        \"contrasena\": \"5678\",\r\n        \"estado\": true\r\n    }\r\n    */\r\n    \r\n\r\n    \r\n    \r\n    {\r\n        \"nombre\": \"Juan Osorio\",\r\n        \"direccion\": \"13 junio y Equinoccial\",\r\n        \"telefono\": \"098874587\",\r\n        \"contrasena\": \"1245\",\r\n        \"estado\": true\r\n    }\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/clientes/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//si algun atributo esta null o vacio, ezte sera actualiado en la entidad\r\n    {\r\n        \"nombre\": \"Juan Osorio\",\r\n        \"direccion\": \"13 junio y Equinoccial\",\r\n        \"telefono\": \"098874587\",\r\n        \"contrasena\": \"1245\",\r\n        \"estado\": false\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/clientes/actualizar/?idCliente=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"actualizar",
+						""
+					],
+					"query": [
+						{
+							"key": "idCliente",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/clientes/eliminar/?idCliente=13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"eliminar",
+						""
+					],
+					"query": [
+						{
+							"key": "idCliente",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/clientes/buscar/?idCliente=13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"buscar",
+						""
+					],
+					"query": [
+						{
+							"key": "idCliente",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerClientePorNombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/clientes/buscar-por-nombre/?nombre=Jose Lema",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"buscar-por-nombre",
+						""
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Jose Lema"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerTodosLosClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/clientes/buscar-todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"buscar-todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "/*\r\n{\r\n  \"numeroCuenta\": \"478758\",\r\n  \"tipoCuenta\": \"Ahorros\",\r\n  \"saldoInicial\": 2000,\r\n  \"estado\": true,\r\n  \"clienteId\": 1\r\n}\r\n*/\r\n/*\r\n{\r\n  \"numeroCuenta\": \"225489\",\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"saldoInicial\": 100,\r\n  \"estado\": true,\r\n  \"clienteId\": 2\r\n}\r\n*/\r\n\r\n/*\r\n{\r\n  \"numeroCuenta\": \"495878\",\r\n  \"tipoCuenta\": \"Ahorros\",\r\n  \"saldoInicial\": 0,\r\n  \"estado\": true,\r\n  \"clienteId\": 3\r\n}\r\n*/\r\n\r\n/*\r\n{\r\n  \"numeroCuenta\": \"496825\",\r\n  \"tipoCuenta\": \"Ahorros\",\r\n  \"saldoInicial\": 540,\r\n  \"estado\": true,\r\n  \"clienteId\": 2\r\n}\r\n*/\r\n//cuenta corriente para JOSE LEMA\r\n{\r\n  \"numeroCuenta\": \"585545\",\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"saldoInicial\": 1000,\r\n  \"estado\": true,\r\n  \"clienteId\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/cuentas/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cuentas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarCuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/cuentas/buscar?idCuenta=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cuentas",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "idCuenta",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarTodasLasCuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/cuentas/buscar-todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cuentas",
+						"buscar-todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/cuentas/eliminar?idCuenta=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cuentas",
+						"eliminar"
+					],
+					"query": [
+						{
+							"key": "idCuenta",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"4859685\",\r\n    \"tipoCuenta\": \"Sueldo\",\r\n    \"saldo\": 10.0,\r\n    \"estado\": true,\r\n    \"clienteId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/cuentas/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cuentas",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearMovimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//valido numero de cueta y no el id, el numero de cuenta es unico\r\n//validacion tipo de movimiento\r\n/*\r\n{\r\n  \"cuenta\": {\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"478758\"\r\n  },\r\n  \"tipoMovimiento\": \"RETIRO\",\r\n  \"monto\": -575,\r\n  \"fechaMovimiento\": \"2023-11-01\"\r\n}\r\n*/\r\n/*\r\n{\r\n  \"cuenta\": {\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"225489\"\r\n  },\r\n  \"tipoMovimiento\": \"DEPOSITO\",\r\n  \"monto\": 600,\r\n  \"fechaMovimiento\": \"2023-11-02\"\r\n}\r\n*/\r\n/*\r\n{\r\n  \"cuenta\": {\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"495878\"\r\n  },\r\n  \"tipoMovimiento\": \"DEPOSITO\",\r\n  \"monto\": 150,\r\n  \"fechaMovimiento\": \"2023-11-10\"\r\n}\r\n*/\r\n{\r\n  \"cuenta\": {\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"496825\"\r\n  },\r\n  \"tipoMovimiento\": \"RETIRO\",\r\n  \"monto\": -540,\r\n  \"fechaMovimiento\": \"2023-11-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/movimientos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movimientos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarMovimiento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/movimientos/buscar/?idMovimiento=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movimientos",
+						"buscar",
+						""
+					],
+					"query": [
+						{
+							"key": "idMovimiento",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarTodosMovimientoPorCuenta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cuenta\": {\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"4859685\"\r\n  },\r\n  \"tipoMovimiento\": \"DEPOSITO\",\r\n  \"monto\": 700.00,\r\n  \"fechaMovimiento\": \"2023-11-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/movimientos/buscar-todo-por-cuenta?idCuenta=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movimientos",
+						"buscar-todo-por-cuenta"
+					],
+					"query": [
+						{
+							"key": "idCuenta",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarMovimiento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarMovimiento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"id\" : 1,\n  \"tipoMovimiento\": \"DEPOSITO\",\n  \"monto\": 200.00,\n  \"fechaMovimiento\": \"2023-11-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/movimientos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movimientos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reportes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/reportes/buscar?fechaInicio=2023-11-01&fechaFin=2023-11-30&cliente=Marianela Montalvo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"reportes",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2023-11-01"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2023-11-30"
+						},
+						{
+							"key": "cliente",
+							"value": "Marianela Montalvo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

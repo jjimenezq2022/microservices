@@ -1,0 +1,26 @@
+
+server:
+  port: 8090
+spring:
+  profiles: dev
+  datasource:
+    #url: jdbc:postgresql://postgres.cq71odd9ysze.us-east-2.rds.amazonaws.com:5432/postgres
+    #username: postgres
+    #password: postgres
+    url: jdbc:postgresql://192.168.100.108:5432/exam
+    username: desricardo
+    password: ASUS2018
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+feign:
+  client:
+    clientepersona: http://localhost:8089
+
+logging:
+  level:
+    root: DEBUG
+hibernate:
+  hbm2ddl:
+    auto:

@@ -1,0 +1,8 @@
+com/microservice/clientepersona/ClientePersonaApplication.class
+com/microservice/clientepersona/repository/ClienteRepository.class
+com/microservice/clientepersona/entity/Cliente.class
+com/microservice/clientepersona/service/ClienteService.class
+com/microservice/clientepersona/controller/ClienteController.class
+com/microservice/clientepersona/entity/Persona.class
+com/microservice/clientepersona/exception/ClienteException.class
+com/microservice/clientepersona/service/ClienteServiceImpl.class

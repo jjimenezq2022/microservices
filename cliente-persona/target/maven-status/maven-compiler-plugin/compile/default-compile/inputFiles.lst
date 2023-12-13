@@ -1,0 +1,8 @@
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/entity/Persona.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/exception/ClienteException.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/repository/ClienteRepository.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/controller/ClienteController.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/ClientePersonaApplication.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/service/ClienteService.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/entity/Cliente.java
+/home/juan/Descargas/practica-main/cliente-persona/cliente-persona/src/main/java/com/microservice/clientepersona/service/ClienteServiceImpl.java
